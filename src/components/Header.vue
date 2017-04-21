@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1 class="title">tilde<strong>tv</strong></h1>
+    <h1 class="title">tilde<strong>tv</strong><small>(beta)</small></h1>
     <span class="subheading">sit back and relax</span>
     <nav>
       <ul>
@@ -26,6 +26,9 @@ header {
   margin-bottom: 0;
   font-weight: 400;
   font-size: 2.5rem;
+}
+.title small {
+  font-size: 1rem;
 }
 
 .subheading {
