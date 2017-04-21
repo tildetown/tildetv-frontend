@@ -18,9 +18,10 @@
 
 <script>
 export default {
-  name: 'videos',
+  name: 'Videos',
   data () {
     return {
+      id: 'JwMfT2cZGHg',
       title: 'What if Barry Bonds had played without a baseball bat? | Chart Party',
       description: 'A must watch even if you don\'t like sports. Jon Bois from SB Nation uses some neat statistics to figure out if baseballer Barry Bonds would still do well, even without carrying a bat.',
       tags: ['sports', 'statistics']
