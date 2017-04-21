@@ -59,6 +59,10 @@ a:focus {
   text-decoration: underline;
 }
 
+p {
+  margin: 0 0 1rem;
+}
+
 #app {
   text-align: center;
   color: #eee;
