@@ -36,7 +36,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
 }
