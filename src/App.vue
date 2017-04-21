@@ -43,6 +43,12 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: #42b983;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 #app {
