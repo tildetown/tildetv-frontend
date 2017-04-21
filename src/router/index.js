@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import VuePaginate from 'vue-paginate'
 import About from '@/components/About'
 import Videos from '@/components/Videos'
 
 Vue.use(Router)
+Vue.use(VuePaginate)
 
 export default new Router({
   routes: [

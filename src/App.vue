@@ -103,4 +103,20 @@ p {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+/**
+ * Pagination container
+ */
+
+.paginate-links {
+  list-style-type: none;
+  padding: 0;
+}
+.paginate-links > li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+.paginate-links .disabled {
+  display: none;
+}
 </style>

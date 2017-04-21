@@ -1,13 +1,16 @@
 <template>
   <div class="videos">
     <h2>this week's playlist</h2>
-    <div class="video-list" v-for="video in videos">
-      <app-video v-bind:id="video.id"
-        v-bind:title="video.title"
-        v-bind:description="video.description"
-        v-bind:tags="video.tags"
-        v-bind:contentWarnings="video.contentWarnings"></app-video>
-    </div>
+    <paginate class="video-list" name="videos" :list="videos" :per="1">
+      <li v-for="video in paginated('videos')">
+        <app-video class="video-list" v-for="video in paginated('videos')" v-bind:id="video.id"
+          v-bind:title="video.title"
+          v-bind:description="video.description"
+          v-bind:tags="video.tags"
+          v-bind:contentWarnings="video.contentWarnings"></app-video>
+      </li>
+    </paginate>
+    <paginate-links for="videos" :simple="{ prev: '« previous', next: 'next »' }"></paginate-links>
   </div>
 </template>
 
@@ -45,7 +48,8 @@ export default {
           tags: ['computers', 'technology', 'politics'],
           contentWarnings: []
         }
-      ]
+      ],
+      paginate: ['videos']
     }
   },
   components: {
@@ -56,6 +60,12 @@ export default {
 
 <style scoped>
 .video-list {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  padding: 0;
+  list-style-type: none;
+}
+.video-list li {
   margin-bottom: 3rem;
 }
 </style>
