@@ -26,6 +26,12 @@ export default {
           tags: ['sports', 'statistics']
         },
         {
+          id: 'sdkxWqsk17c',
+          title: 'On The Turing Completeness of PowerPoint (SIGBOVIK)',
+          description: 'A parody talk researching the turing-completeness of PowerPoint.',
+          tags: ['technology', 'powerpoint', 'parody']
+        },
+        {
           id: 'thnXzUFJnfQ',
           title: 'Amiga music: Captain - Space Debris',
           description: '',
