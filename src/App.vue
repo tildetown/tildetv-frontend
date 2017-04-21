@@ -116,6 +116,18 @@ p {
   display: inline-block;
   margin: 0 1rem;
 }
+.paginate-links > li a {
+  padding: .5rem 1rem;
+  text-decoration: none;
+  background-color: #333;
+}
+.paginate-links > li a:hover {
+  padding: .5rem 1rem;
+  text-decoration: none;
+  color: #333;
+  background-color: #42b983;
+  cursor: pointer;
+}
 .paginate-links .disabled {
   display: none;
 }
