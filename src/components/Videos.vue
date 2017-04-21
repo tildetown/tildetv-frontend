@@ -3,7 +3,12 @@
     <h2>this week's playlist</h2>
     <ul class="video-list">
       <li v-for="video in videos">
-        <router-link :to="{ name: 'Video', params: { id: video.id }}">{{ video.title }}</router-link>
+        <router-link :to="{ name: 'Video', params: {
+          id: video.id,
+          title: video.title,
+          description: video.description,
+          tags: video.tags
+        }}">{{ video.title }}</router-link>
       </li>
     </ul>
     <p><router-link to="/">Home</router-link></p>

@@ -5,9 +5,9 @@
     </div>
     <div class="metadata">
       <h4>{{ title }}</h4>
-      <p>{{ description }}</p>
+      <p v-if="description">{{ description }}</p>
 
-      <video-tag-list v-bind:tags="tags"></video-tag-list>
+      <video-tag-list v-if="tags.length > 0" v-bind:tags="tags"></video-tag-list>
     </div>
     <div class="links">
       <a href="#" class="previous">&larr; Previous</a>
@@ -25,9 +25,9 @@ export default {
   data () {
     return {
       id: this.$route.params.id,
-      title: 'What if Barry Bonds had played without a baseball bat? | Chart Party',
-      description: 'A must watch even if you don\'t like sports. Jon Bois from SB Nation uses some neat statistics to figure out if baseballer Barry Bonds would still do well, even without carrying a bat.',
-      tags: ['sports', 'statistics']
+      title: this.$route.params.title,
+      description: this.$route.params.description,
+      tags: this.$route.params.tags
     }
   },
   filters: {
