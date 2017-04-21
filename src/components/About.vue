@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h2>about tildetv</h2>
+    <h1>about tildetv</h1>
     <p>tildetv is a new way to enjoy media on the internet.</p>
 
     <h2>adding stuff to tildetv</h2>
