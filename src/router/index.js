@@ -25,7 +25,15 @@ export default new Router({
     },
     {
       path: '/videos-by-tag',
-      redirect: '/videos'
+      name: 'Video Tag List',
+      redirect: '/videos',
+      children: [
+        {
+          path: ':tag',
+          name: 'Videos By Tag',
+          redirect: '/videos'
+        }
+      ]
     }
   ]
 })

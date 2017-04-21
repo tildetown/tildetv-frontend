@@ -6,7 +6,8 @@
     <div class="metadata">
       <h4>{{ title }}</h4>
       <p>{{ description }}</p>
-      <strong>Tags:</strong> <span class="tags" v-for="tag in tags">{{ tag }}, </span>
+
+      <video-tag-list v-bind:tags="tags"></video-tag-list>
     </div>
     <div class="links">
       <a href="#" class="previous">&larr; Previous</a>
@@ -17,6 +18,8 @@
 </template>
 
 <script>
+import VideoTagList from './VideoTagList.vue'
+
 export default {
   name: 'video',
   data () {
@@ -34,6 +37,9 @@ export default {
       value = value.toString()
       return 'https://www.youtube.com/embed/' + value
     }
+  },
+  components: {
+    'video-tag-list': VideoTagList
   }
 }
 </script>
