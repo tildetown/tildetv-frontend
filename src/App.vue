@@ -42,6 +42,24 @@ body {
   min-height: 100%;
 }
 
+a {
+  color: #42b983;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+a strong {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: 400;
@@ -49,14 +67,23 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 
-a {
-  color: #42b983;
-  text-decoration: none;
+h1 {
+  font-size: 2rem;
 }
 
-a:hover,
-a:focus {
-  text-decoration: underline;
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 p {

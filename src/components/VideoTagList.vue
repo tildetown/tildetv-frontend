@@ -1,6 +1,5 @@
 <template>
   <div class="video-tag-list">
-    <strong>Tags:</strong>
     <span class="tag" v-for="tag in tags"><router-link :to="{ name: 'Videos By Tag', params: { tag }}">{{ tag }}</router-link></span>
   </div>
 </template>
@@ -19,7 +18,6 @@ export default {
   font-size: 85%;
   background-color: #333;
 }
-
 .tag:last-child {
   margin-right: 0;
 }

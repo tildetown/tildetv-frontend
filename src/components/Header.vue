@@ -23,7 +23,17 @@ header {
 }
 
 .title {
+  margin-bottom: 0;
   font-weight: 400;
+  font-size: 3rem;
+}
+
+.subheading {
+  font-size: 1.5rem;
+}
+
+nav {
+  margin: 1.5rem 0;
 }
 
 ul {
