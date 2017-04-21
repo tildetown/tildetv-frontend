@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .tag {
   margin-right: .5rem;
   padding: .125rem .25rem;
