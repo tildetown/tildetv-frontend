@@ -25,11 +25,11 @@ header {
 .title {
   margin-bottom: 0;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .subheading {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 nav {

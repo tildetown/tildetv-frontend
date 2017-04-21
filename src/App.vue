@@ -93,7 +93,7 @@ p {
 #app {
   text-align: center;
   color: #eee;
-  padding-top: 1em;
+  padding: 1em 0;
 }
 
 .container {
