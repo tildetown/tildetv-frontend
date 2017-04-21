@@ -39,6 +39,10 @@ export default {
 </script>
 
 <style scoped>
+h4, h5, h6 {
+  font-weight: 600;
+}
+
 .metadata {
   margin-bottom: 2rem;
 }
