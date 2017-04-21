@@ -1,7 +1,7 @@
 {
   "name": "tildetv-frontend",
   "version": "1.0.0",
-  "description": "A web player for all videos played in tilde.town. Sit back and relax.",
+  "description": "A web player for all videos shared within tilde.town. Sit back and relax.",
   "author": "Resi Respati <resir014@gmail.com>",
   "license": "MIT",
   "private": true,
