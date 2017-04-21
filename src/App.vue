@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
-      <h1 class="title">tilde<strong>tv</strong></h1>
+      <app-header></app-header>
       <router-view></router-view>
       <footer>
         <router-link to="/">home</router-link>
@@ -11,8 +11,13 @@
 </template>
 
 <script>
+import Header from './components/Header.vue'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    'app-header': Header
+  }
 }
 </script>
 
@@ -64,9 +69,5 @@ a:focus {
   max-width: 36em;
   margin-left: auto;
   margin-right: auto;
-}
-
-.title {
-  font-weight: 400;
 }
 </style>
