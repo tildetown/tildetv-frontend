@@ -3,20 +3,20 @@
     <div class="container">
       <app-header></app-header>
       <router-view></router-view>
-      <footer>
-        <router-link to="/">home</router-link>
-      </footer>
+      <app-footer></app-footer>
     </div>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'app',
   components: {
-    'app-header': Header
+    'app-header': Header,
+    'app-footer': Footer
   }
 }
 </script>
@@ -66,8 +66,10 @@ a:focus {
 }
 
 .container {
-  max-width: 36em;
+  max-width: 48em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 </style>
