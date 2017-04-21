@@ -1,6 +1,5 @@
 <template>
   <div class="videos">
-    <h2>this week's playlist</h2>
     <paginate class="video-list" name="videos" :list="videos" :per="1">
       <li v-for="video in paginated('videos')">
         <app-video class="video-list" v-for="video in paginated('videos')" :key="video-id"
@@ -30,7 +29,7 @@ export default {
           tags: ['sports', 'statistics']
         },
         {
-          id: 'sdkxWqsk17c',
+          id: 'uNjxe8ShM-8',
           title: 'On The Turing Completeness of PowerPoint (SIGBOVIK)',
           description: 'A parody talk researching the turing-completeness of PowerPoint.',
           tags: ['technology', 'powerpoint', 'parody']

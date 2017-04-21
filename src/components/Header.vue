@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1 class="title">tilde<strong>tv</strong><small>(beta)</small></h1>
+    <h1 class="title"><router-link to="/">tilde<strong>tv</strong><small>(beta)</small></router-link></h1>
     <span class="subheading">sit back and relax</span>
     <nav>
       <ul>
@@ -23,9 +23,14 @@ header {
 }
 
 .title {
+  margin-top: 0;
   margin-bottom: 0;
   font-weight: 400;
   font-size: 2.5rem;
+}
+.title a {
+  text-decoration: none;
+  color: inherit;
 }
 .title small {
   font-size: 1rem;
@@ -37,6 +42,12 @@ header {
 
 nav {
   margin: 1.5rem 0;
+}
+nav a {
+  text-decoration: none;
+}
+nav .router-link-active {
+  color: inherit;
 }
 
 ul {
