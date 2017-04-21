@@ -1,21 +1,19 @@
 <template>
   <div class="videos">
     <h2>this week's playlist</h2>
-    <ul class="video-list">
-      <li v-for="video in videos">
-        <router-link :to="{ name: 'Video', params: {
-          id: video.id,
-          title: video.title,
-          description: video.description,
-          tags: video.tags
-        }}">{{ video.title }}</router-link>
-      </li>
-    </ul>
-    <p><router-link to="/">Home</router-link></p>
+    <div class="video-list" v-for="video in videos">
+      <app-video v-bind:id="video.id"
+        v-bind:title="video.title"
+        v-bind:description="video.description"
+        v-bind:tags="video.tags"
+        v-bind:contentWarnings="video.contentWarnings"></app-video>
+    </div>
   </div>
 </template>
 
 <script>
+import Video from './video.vue'
+
 export default {
   name: 'videos',
   data () {
@@ -31,7 +29,7 @@ export default {
           id: 'thnXzUFJnfQ',
           title: 'Amiga music: Captain - Space Debris',
           description: '',
-          tags: [],
+          tags: ['music'],
           contentWarnings: []
         },
         {
@@ -39,17 +37,19 @@ export default {
           title: 'Internet Voting? Really? | Andrew Appel | TEDxPrincetonU',
           description: '',
           tags: ['computers', 'technology', 'politics'],
-          contentWarnings: ['flashing images']
+          contentWarnings: []
         }
       ]
     }
+  },
+  components: {
+    'app-video': Video
   }
 }
 </script>
 
 <style scoped>
 .video-list {
-  margin-bottom: 2rem;
-  text-align: left;
+  margin-bottom: 3rem;
 }
 </style>

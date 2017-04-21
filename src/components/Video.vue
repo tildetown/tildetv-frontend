@@ -9,11 +9,6 @@
 
       <video-tag-list v-if="tags.length > 0" v-bind:tags="tags"></video-tag-list>
     </div>
-    <div class="links">
-      <a href="#" class="previous">&larr; Previous</a>
-      <router-link to="/">Home</router-link>
-      <a href="#" class="next">Next &rarr;</a>
-    </div>
   </div>
 </template>
 
@@ -22,13 +17,9 @@ import VideoTagList from './VideoTagList.vue'
 
 export default {
   name: 'video',
-  data () {
-    return {
-      id: this.$route.params.id,
-      title: this.$route.params.title,
-      description: this.$route.params.description,
-      tags: this.$route.params.tags
-    }
+  props: ['id', 'title', 'description', 'tags', 'contentWarnings'],
+  components: {
+    'video-tag-list': VideoTagList
   },
   filters: {
     embedLink: function (value) {
@@ -37,9 +28,6 @@ export default {
       value = value.toString()
       return 'https://www.youtube.com/embed/' + value
     }
-  },
-  components: {
-    'video-tag-list': VideoTagList
   }
 }
 </script>

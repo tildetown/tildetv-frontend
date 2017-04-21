@@ -3,6 +3,9 @@
     <div class="container">
       <h1 class="title">tilde<strong>tv</strong></h1>
       <router-view></router-view>
+      <footer>
+        <router-link to="/">home</router-link>
+      </footer>
     </div>
   </div>
 </template>
