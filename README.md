@@ -1,6 +1,6 @@
 # tildetv-frontend
 
-> A web player for all videos played in tilde.town. Sit back and relax.
+> A web player for all videos shared within tilde.town. Sit back and relax.
 
 ## Build Setup
 
