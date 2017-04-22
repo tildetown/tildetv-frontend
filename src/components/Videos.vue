@@ -1,8 +1,6 @@
 <template>
   <div class="videos">
-    <div v-if="videos.pending">
-      <p>fetching videos...</p>
-    </div>
+    <p v-if="videos.pending">fetching videos...</p>
     <div v-if="videos.fulfilled">
       <paginate class="video-list" name="videos" :list="videos.value" :per="1">
         <li v-for="video in paginated('videos')">
@@ -17,9 +15,7 @@
       <paginate-links for="videos"
         :simple="{ prev: '« previous', next: 'next »' }"></paginate-links>
     </div>
-    <div v-if="videos.rejected">
-      <p>{{ videos.reason.message }}</p>
-    </div>
+    <p v-if="videos.rejected">{{ videos.reason.message }}</p>
   </div>
 </template>
 
