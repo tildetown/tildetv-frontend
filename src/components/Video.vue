@@ -4,8 +4,9 @@
       <iframe width="1280" height="720" :src="id | embedLink" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="metadata">
-      <h4>{{ title }}</h4>
+      <h4 v-if="title">{{ title }}</h4>
       <p v-if="description">{{ description }}</p>
+      <p v-if="user">added by <a :href="user | userLink">~{{ user }}</a></p>
 
       <video-tag-list v-if="tags.length > 0" v-bind:tags="tags"></video-tag-list>
     </div>
@@ -17,7 +18,7 @@ import VideoTagList from './VideoTagList.vue'
 
 export default {
   name: 'video',
-  props: ['id', 'title', 'description', 'tags', 'contentWarnings'],
+  props: ['id', 'title', 'description', 'user', 'tags', 'contentWarnings'],
   components: {
     'video-tag-list': VideoTagList
   },
@@ -27,6 +28,12 @@ export default {
 
       value = value.toString()
       return 'https://www.youtube.com/embed/' + value
+    },
+    userLink: function (value) {
+      if (!value) return ''
+
+      value = value.toString()
+      return 'https://tilde.town/~' + value
     }
   }
 }

@@ -8,6 +8,7 @@
             v-bind:id="video.id"
             v-bind:title="video.title"
             v-bind:description="video.description"
+            v-bind:user="video.user"
             v-bind:tags="video.tags"
             v-bind:contentWarnings="video.contentWarnings"></app-video>
         </li>
