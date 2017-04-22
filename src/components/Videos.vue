@@ -30,7 +30,7 @@ export default {
   }),
   fetch: {
     videos () {
-      return 'static/api/videos.json'
+      return 'static/sample-api/videos.json'
     }
   },
   components: {
