@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import VuePaginate from 'vue-paginate'
 import FetchData from 'vue-fetch-data'
 import Hello from '@/components/Hello'
-import About from '@/components/About'
+import Howto from '@/components/Howto'
 import Videos from '@/components/Videos'
 
 Vue.use(Router)
@@ -18,9 +18,9 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/about',
-      name: 'About',
-      component: About
+      path: '/howto',
+      name: 'Howto',
+      component: Howto
     },
     {
       path: '/videos',

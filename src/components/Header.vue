@@ -5,7 +5,7 @@
     <nav>
       <ul>
         <li><router-link to="/videos">this week's playlist</router-link></li>
-        <li><router-link to="/about">about tildetv</router-link></li>
+        <li><router-link to="/howto">add videos</router-link></li>
       </ul>
     </nav>
   </header>
