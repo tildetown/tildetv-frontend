@@ -1,14 +1,7 @@
 <template>
   <div class="hello">
-    <h2>sit back and relax</h2>
-    <ul>
-      <li>
-        <router-link :to="{ name: 'Videos'}">this week's playlist</router-link>
-      </li>
-      <li>
-        <router-link to="/videos-by-tag">search by tag</router-link>
-      </li>
-    </ul>
+    <p>tildetv is a new way to enjoy media on the internet. each of the videos featured here are curated by <a href="https://tilde.town">tilde.town members</a>, and are available here for everyone's viewing pleasure.</p>
+    <p>videos are reset every week, so you're bound to see something fresh!</p>
   </div>
 </template>
 

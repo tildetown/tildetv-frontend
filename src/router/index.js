@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import VuePaginate from 'vue-paginate'
 import FetchData from 'vue-fetch-data'
+import Hello from '@/components/Hello'
 import About from '@/components/About'
 import Videos from '@/components/Videos'
 
@@ -14,7 +15,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Videos
+      component: Hello
     },
     {
       path: '/about',
