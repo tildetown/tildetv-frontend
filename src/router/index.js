@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import VuePaginate from 'vue-paginate'
+import FetchData from 'vue-fetch-data'
 import About from '@/components/About'
 import Videos from '@/components/Videos'
 
 Vue.use(Router)
 Vue.use(VuePaginate)
+Vue.use(FetchData)
 
 export default new Router({
   routes: [
