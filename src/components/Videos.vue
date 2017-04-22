@@ -57,15 +57,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.video-list {
-  margin-top: 0;
-  margin-bottom: 3rem;
-  padding: 0;
-  list-style-type: none;
-}
-.video-list li {
-  margin-bottom: 3rem;
-}
-</style>

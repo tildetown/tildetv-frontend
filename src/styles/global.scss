@@ -1,0 +1,142 @@
+@import "variables";
+
+// Global resets
+//
+// Update the global foundational styling of a project
+
+html {
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: $base00-background;
+  color: $base06;
+  min-height: 100%;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  strong {
+    color: inherit;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: $base07;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+strong {
+  color: $base07;
+}
+
+// Layout
+//
+// Base elements for layouts.
+
+.container {
+  max-width: 48em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+// Pagination container
+
+.paginate-links {
+  list-style-type: none;
+  padding: 0;
+
+  > li {
+    display: inline-block;
+    margin: 0 1rem;
+
+    a {
+      padding: .5rem 1rem;
+      text-decoration: none;
+      background-color: $base01-background;
+
+      &:hover {
+        padding: .5rem 1rem;
+        text-decoration: none;
+        color: $base01-background;
+        background-color: $link-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .disabled {
+    display: none;
+  }
+}
+
+// App
+//
+// Base styles for the application entry point.
+
+#app {
+  text-align: center;
+  padding: 1em 0;
+}
+
+// Components
+//
+// Import files for custom components below this line
+
+@import "components/header";
+@import "components/footer";
+@import "components/about";
+@import "components/videos";
+@import "components/video";
+@import "components/video-tag-list";

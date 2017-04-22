@@ -14,18 +14,3 @@ export default {
   name: 'app-footer'
 }
 </script>
-
-<style scoped>
-footer {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: 1px solid #222;
-}
-
-small {
-  display: block;
-  margin: .5rem 0;
-}
-</style>

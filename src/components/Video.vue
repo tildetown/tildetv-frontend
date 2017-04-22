@@ -31,35 +31,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-h4, h5, h6 {
-  font-weight: 600;
-}
-
-.metadata {
-  margin-bottom: 2rem;
-}
-
-/**
- * Video wrapper.
- *
- * @see https://alistapart.com/article/creating-intrinsic-ratios-for-video
- */
-
-.video-wrapper {
-  position: relative;
-  height: 0;
-  padding-bottom: 56.25%;
-  margin-top: 1rem;
-  margin-bottom: 1rem
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left:0;
-  width: 100%;
-  height: 100%
-}
-</style>

@@ -10,15 +10,3 @@ export default {
   props: ['tags']
 }
 </script>
-
-<style scoped>
-.tag {
-  margin-right: .5rem;
-  padding: .125rem .25rem;
-  font-size: 85%;
-  background-color: #222;
-}
-.tag:last-child {
-  margin-right: 0;
-}
-</style>

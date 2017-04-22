@@ -14,9 +14,3 @@ export default {
   name: 'about'
 }
 </script>
-
-<style scoped>
-.about {
-  text-align: left;
-}
-</style>
