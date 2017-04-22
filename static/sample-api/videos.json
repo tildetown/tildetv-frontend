@@ -3,6 +3,7 @@
     "id": "JwMfT2cZGHg",
     "title": "What if Barry Bonds had played without a baseball bat? | Chart Party",
     "description": "A must watch even if you don't like sports. Jon Bois from SB Nation uses some neat statistics to figure out if baseballer Barry Bonds would still do well, even without carrying a bat.",
+    "user": "resir014",
     "tags": ["sports", "statistics"],
     "contentWarnings": []
   },
@@ -10,13 +11,23 @@
     "id": "uNjxe8ShM-8",
     "title": "On The Turing Completeness of PowerPoint (SIGBOVIK)",
     "description": "A parody talk researching the turing-completeness of PowerPoint.",
-    "tags": ["technology", "powerpoint", "parody"],
+    "user": "resir014",
+    "tags": [],
+    "contentWarnings": []
+  },
+  {
+    "id": "p-R1O7FN3yI",
+    "title": "",
+    "description": "How the aeroplanes do the barrel rolls in real life",
+    "user": "karlen",
+    "tags": [],
     "contentWarnings": []
   },
   {
     "id": "thnXzUFJnfQ",
     "title": "Amiga music: Captain - Space Debris",
     "description": "",
+    "user": "resir014",
     "tags": ["music"],
     "contentWarnings": []
   },
@@ -24,6 +35,7 @@
     "id": "abQCqIbBBeM",
     "title": "Internet Voting? Really? | Andrew Appel | TEDxPrincetonU",
     "description": "",
+    "user": "resir014",
     "tags": ["computers", "technology", "politics"],
     "contentWarnings": []
   }
