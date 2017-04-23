@@ -6,8 +6,9 @@
 
 html {
   height: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: $root-font-family;
+  font-size: $root-font-size;
+  line-height: $root-line-height;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
@@ -19,8 +20,8 @@ html {
 
 body {
   margin: 0;
-  background-color: $base00-background;
-  color: $base06;
+  background-color: $body-bg;
+  color: $body-color;
   min-height: 100%;
 }
 
@@ -104,12 +105,12 @@ strong {
     a {
       padding: .5rem 1rem;
       text-decoration: none;
-      background-color: $base01-background;
+      background-color: $label-color;
 
       &:hover {
         padding: .5rem 1rem;
         text-decoration: none;
-        color: $base01-background;
+        color: $label-color;
         background-color: $link-color;
         cursor: pointer;
       }
