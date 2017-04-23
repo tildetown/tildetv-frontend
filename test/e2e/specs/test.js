@@ -12,8 +12,14 @@ module.exports = {
       .url(devServer)
       .waitForElementVisible('#app', 5000)
       .assert.elementPresent('.hello')
-      .assert.containsText('h2', 'sit back and relax')
+      .assert.containsText('p', 'tildetv is a new way to enjoy media on the internet.')
       .assert.elementCount('h1', 1)
+      .useXpath()
+      .click("//a[text()='add videos']")
+      .useCss()
+      .pause(1000)
+      .assert.elementPresent('.about')
+      .assert.containsText('.about', 'adding stuff to tildetv')
       .end()
   }
 }

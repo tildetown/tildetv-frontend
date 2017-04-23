@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import Hello from '@/components/Hello'
 
+function getRenderedText (Component, propsData) {
+  const Constructor = Vue.extend(Component)
+  const vm = new Constructor({ propsData }).$mount()
+  return vm.$el.textContent
+}
+
 describe('Hello.vue', () => {
   it('should render correct contents', () => {
-    const Constructor = Vue.extend(Hello)
-    const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('.hello h2').textContent)
-      .to.equal('sit back and relax')
+    expect(getRenderedText(Hello, {})).to.contain('tildetv is a new way to enjoy media on the internet.')
   })
 })
