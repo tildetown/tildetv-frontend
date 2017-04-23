@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1 class="title"><router-link to="/">tilde<strong>tv</strong><small>(beta)</small></router-link></h1>
+    <h1 class="title"><router-link to="/">tilde<span>tv</span><small>(beta)</small></router-link></h1>
     <span class="subheading">sit back and relax</span>
     <nav>
       <ul>
