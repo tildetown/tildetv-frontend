@@ -1,5 +1,5 @@
 <template>
-  <div class="video">
+  <div id="video">
     <div class="video-wrapper">
       <iframe width="1280" height="720" :src="id | embedLink" frameborder="0" allowfullscreen></iframe>
     </div>

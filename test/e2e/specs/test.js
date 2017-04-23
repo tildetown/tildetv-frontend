@@ -11,15 +11,15 @@ module.exports = {
     browser
       .url(devServer)
       .waitForElementVisible('#app', 5000)
-      .assert.elementPresent('.hello')
+      .assert.elementPresent('#hello')
       .assert.containsText('p', 'tildetv is a new way to enjoy media on the internet.')
       .assert.elementCount('h1', 1)
       .useXpath()
       .click("//a[text()='add videos']")
       .useCss()
       .pause(1000)
-      .assert.elementPresent('.about')
-      .assert.containsText('.about', 'adding stuff to tildetv')
+      .assert.elementPresent('#howto')
+      .assert.containsText('#howto', 'adding stuff to tildetv')
       .end()
   }
 }

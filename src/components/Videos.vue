@@ -1,5 +1,5 @@
 <template>
-  <div class="videos">
+  <div id="videos">
     <p v-if="videos.pending">fetching videos...</p>
     <div v-if="videos.fulfilled">
       <paginate class="video-list" name="videos" :list="videos.value" :per="1">

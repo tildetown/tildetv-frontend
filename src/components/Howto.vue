@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div id="howto">
     <h1>adding stuff to tildetv</h1>
     <p>coming soon!</p>
   </div>
@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'about'
+  name: 'howto'
 }
 </script>
