@@ -6,7 +6,7 @@
     <div class="metadata">
       <h4 v-if="title">{{ title }}</h4>
       <p v-if="description">{{ description }}</p>
-      <p v-if="user">added by <a :href="user | userLink">~{{ user }}</a></p>
+      <p v-if="user"><small>added by <a :href="user | userLink">~{{ user }}</a> on {{ date | generateDate }}</small></p>
 
       <video-tag-list v-if="tags.length > 0" v-bind:tags="tags"></video-tag-list>
     </div>
@@ -18,7 +18,7 @@ import VideoTagList from './VideoTagList.vue'
 
 export default {
   name: 'video',
-  props: ['id', 'title', 'description', 'user', 'tags', 'contentWarnings'],
+  props: ['id', 'title', 'date', 'description', 'user', 'tags', 'contentWarnings'],
   components: {
     'video-tag-list': VideoTagList
   },
@@ -34,6 +34,12 @@ export default {
 
       value = value.toString()
       return 'https://tilde.town/~' + value
+    },
+    generateDate: function (value) {
+      if (!value) return 0
+
+      value = parseInt(value)
+      return new Date(value * 1000).toISOString()
     }
   }
 }
