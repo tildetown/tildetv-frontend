@@ -4,7 +4,15 @@
       <iframe width="1280" height="720" :src="id.v | embedLink" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="metadata">
-      <h4 v-if="title">{{ title }}</h4>
+      <h4 v-if="title">
+        {{ title }}
+        <a title="Click to show content warnings" class="cw-notifier"
+          v-if="contentWarnings.length > 0"
+          v-on:click="cwToggle = !cwToggle">CW</a>
+      </h4>
+      <video-content-warning-list v-if="cwToggle"
+        v-bind:contentWarnings="contentWarnings"></video-content-warning-list>
+
       <p v-if="description">{{ description }}</p>
       <p v-if="user"><small>added by <a :href="user | userLink">~{{ user }}</a> on {{ addedtime | generateTime }}</small></p>
 
@@ -15,12 +23,19 @@
 
 <script>
 import VideoTagList from './VideoTagList.vue'
+import VideoContentWarningList from './VideoContentWarningList.vue'
 
 export default {
   name: 'video',
   props: ['id', 'youtubelink', 'title', 'addedtime', 'description', 'user', 'tags', 'contentWarnings'],
+  data () {
+    return {
+      cwToggle: false
+    }
+  },
   components: {
-    'video-tag-list': VideoTagList
+    'video-tag-list': VideoTagList,
+    'video-content-warning-list': VideoContentWarningList
   },
   filters: {
     embedLink: function (value) {

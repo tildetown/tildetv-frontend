@@ -1,0 +1,19 @@
+#video-content-warning-list {
+  margin-bottom: 1rem;
+
+  .content-warning {
+    margin-right: .5rem;
+    padding: .125rem .25rem;
+    font-size: 85%;
+    color: $content-warning-label-color;
+    background-color: $content-warning-label-background;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

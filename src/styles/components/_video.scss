@@ -8,6 +8,16 @@
   .metadata {
     margin-bottom: 2rem;
   }
+
+  // Content warning labels
+  .cw-notifier {
+    padding: .125rem .25rem;
+    font-size: 85%;
+    color: $content-warning-label-color;
+    background-color: $content-warning-label-background;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 // Video wrapper.
