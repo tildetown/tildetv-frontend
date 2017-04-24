@@ -1,7 +1,7 @@
 <template>
   <div id="howto">
     <h1>adding stuff to tildetv</h1>
-    <p>to add videos to tildetv you can use the command-line tool generously provided by <a href="https://tilde.town/~karlen">~karlen</a>.</p>
+    <p>to add videos to tildetv you can use the command-line tool provided by <a href="https://tilde.town/~karlen">~karlen</a>.</p>
     <div class="highlight">
 <pre>$ ~karlen/tv/addtotv -h
 
