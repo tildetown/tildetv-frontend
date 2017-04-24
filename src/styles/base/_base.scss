@@ -1,0 +1,44 @@
+// Global resets
+//
+// Update the global foundational styling of a project
+
+html {
+  height: 100%;
+  font-family: $root-font-family;
+  font-size: $root-font-size;
+  line-height: $root-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: $body-bg;
+  color: $body-color;
+  min-height: 100%;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  strong {
+    color: inherit;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+}
