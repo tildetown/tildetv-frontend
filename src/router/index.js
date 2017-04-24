@@ -5,6 +5,7 @@ import FetchData from 'vue-fetch-data'
 import Hello from '@/components/Hello'
 import Howto from '@/components/Howto'
 import Videos from '@/components/Videos'
+import PageNotFound from '@/components/errors/404'
 
 Vue.use(Router)
 Vue.use(VuePaginate)
@@ -15,11 +16,6 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      redirect: '/about'
-    },
-    {
-      path: '/about',
-      name: 'About',
       component: Hello
     },
     {
@@ -43,6 +39,11 @@ export default new Router({
           redirect: '/videos'
         }
       ]
+    },
+    {
+      path: '*',
+      name: '404 - Page Not Found',
+      component: PageNotFound
     }
   ]
 })

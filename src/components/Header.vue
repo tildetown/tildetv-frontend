@@ -4,7 +4,7 @@
     <span class="subheading">sit back and relax</span>
     <nav>
       <ul>
-        <li><router-link to="/about">about</router-link></li>
+        <li><router-link to="/" exact>about</router-link></li>
         <li><router-link to="/videos">this week's playlist</router-link></li>
         <li><router-link to="/howto">add videos</router-link></li>
       </ul>
