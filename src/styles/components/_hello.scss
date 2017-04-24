@@ -1,13 +1,5 @@
 @import "../utils/variables";
 
 #hello {
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 1rem;
-  }
+  text-align: left;
 }
