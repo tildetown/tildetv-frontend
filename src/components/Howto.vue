@@ -9,15 +9,16 @@ Usage: addtotv [options] arg
 
 Options:
   -h, --help            show this help message and exit
-  -l LINK, --link=LINK  URL to youtube video quoted -l
+  -l LINK, --link=LINK  URL to youtube video quoted. e.g. -l
                         "https://www.youtube.com/watch?v=z7VYVjR_nwE"
-  -t TAGS, --tags=TAGS  Tags, comma separated and quoted, e.g. -t "Train, Ice,
+  -t TAGS, --tags=TAGS  Tags, comma separated and quoted. e.g. -t "Train, Ice,
                         cold"
   -c CW, --contentwarning=CW
-                        Content warning, comma separatedand quoted, e.g -c
+                        Content warning, comma separated and quoted. e.g. -c
                         "Doggo, pupper, Joyce"
-  -d DESC, --desc=DESC  Description of the video, quoted "A real angerery
-                        pupper writing about pubs"</pre>
+  -d DESC, --description=DESC
+                        Description of the video, quoted. e.g. "A real
+                        angerery pupper writing about pubs"</pre>
     </div>
   </div>
 </template>
