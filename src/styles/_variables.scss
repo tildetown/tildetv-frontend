@@ -4,7 +4,6 @@
 
 // Colours based on the base16 styleguide
 // https://chriskempson.github.io/base16/
-
 $base00-background: #181818;
 $base01-background: #282828;
 $base02-background: #383838;
@@ -40,13 +39,11 @@ $base0E: #ba8baf;
 $base0F: #a16946;
 
 // Base variables
-
 $root-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 $root-font-size: 16px;
 $root-line-height: 1.15;
 
 // Typography
-
 $body-color: $base05;
 $body-color-muted: darken($body-color, 15%);
 $body-bg: $base00-background;
@@ -54,5 +51,10 @@ $heading-color: $base07;
 $link-color: $base0E;
 
 // Other components
-
+$border-color: darken($base01, 2.5%);
 $label-color: $base01-background;
+
+// Code
+$code-font-family: Consolas, "Liberation Mono", Menlo, Monaco, Courier New, monospace;
+$code-color: #bf616a;
+$code-background-color: $border-color;
