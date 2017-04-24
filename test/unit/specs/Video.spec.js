@@ -10,23 +10,27 @@ function getRenderedText (Component, propsData) {
 describe('Video.vue', () => {
   it('renders correctly with different props', () => {
     expect(getRenderedText(Video, {
-      id: 'JwMfT2cZGHg',
-      date: 1492256083,
-      title: 'What if Barry Bonds had played without a baseball bat? | Chart Party',
+      contentWarnings: [],
       description: 'A must watch even if you don\'t like sports. Jon Bois from SB Nation uses some neat statistics to figure out if baseballer Barry Bonds would still do well, even without carrying a bat.',
-      user: 'resir014',
+      title: 'What if Barry Bonds had played without a baseball bat? | Chart Party',
+      addedtime: 1492256083,
       tags: ['sports', 'statistics'],
-      contentWarnings: []
+      id: {
+        v: 'JwMfT2cZGHg'
+      },
+      user: 'resir014'
     })).to.contain('What if Barry Bonds had played without a baseball bat? | Chart Party')
 
     expect(getRenderedText(Video, {
-      id: 'uNjxe8ShM-8',
-      date: 1492414194,
-      title: 'On The Turing Completeness of PowerPoint (SIGBOVIK)',
+      contentWarnings: [],
       description: 'A parody talk researching the turing-completeness of PowerPoint.',
-      user: 'resir014',
+      title: 'On The Turing Completeness of PowerPoint (SIGBOVIK)',
+      addedtime: 1492414194,
       tags: [],
-      contentWarnings: []
+      id: {
+        v: 'uNjxe8ShM-8'
+      },
+      user: 'resir014'
     })).to.contain('On The Turing Completeness of PowerPoint (SIGBOVIK)')
   })
 })

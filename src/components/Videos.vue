@@ -6,8 +6,9 @@
         <li v-for="video in paginated('videos')">
           <app-video
             v-bind:id="video.id"
+            v-bind:youtubelink="video.youtubelink"
             v-bind:title="video.title"
-            v-bind:date="video.date"
+            v-bind:addedtime="video.addedtime"
             v-bind:description="video.description"
             v-bind:user="video.user"
             v-bind:tags="video.tags"
@@ -32,7 +33,9 @@ export default {
   }),
   fetch: {
     videos () {
-      return 'static/sample-api/videos.json'
+      return process.env.NODE_ENV === 'development'
+        ? 'static/sample-api/videos.json'
+        : 'https://tilde.town/~karlen/tv/videos.json'
     }
   },
   components: {

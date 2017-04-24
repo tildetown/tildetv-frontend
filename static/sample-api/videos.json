@@ -1,56 +1,53 @@
 [
   {
-    "id": "JwMfT2cZGHg",
-    "date": 1492256083,
-    "title": "What if Barry Bonds had played without a baseball bat? | Chart Party",
+    "contentWarnings": [
+      "Trains"
+    ],
+    "description": "One of my favourite videos, a relaxing minute by minute train journey from Bergen to Oslo",
+    "title": "BergensBanen minutt for minutt HD (Full video)",
+    "addedtime": 1492970809,
+    "tags": [
+      "SlowTv",
+      "Train",
+      "Norway"
+    ],
+    "youtubelink": "https://www.youtube.com/watch?v=z7VYVjR_nwE",
+    "id": {
+      "v": [
+        "z7VYVjR_nwE"
+      ]
+    },
+    "user": "karlen"
+  },
+  {
+    "contentWarnings": [],
     "description": "A must watch even if you don't like sports. Jon Bois from SB Nation uses some neat statistics to figure out if baseballer Barry Bonds would still do well, even without carrying a bat.",
-    "user": "resir014",
-    "tags": ["sports", "statistics"],
-    "contentWarnings": []
+    "title": "What if Barry Bonds had played without a baseball bat? | Chart Party",
+    "addedtime": 1492256083,
+    "tags": [
+      "sports",
+      "statistics"
+    ],
+    "youtubelink": "https://www.youtube.com/watch?v=JwMfT2cZGHg",
+    "id": {
+      "v": [
+        "JwMfT2cZGHg"
+      ]
+    },
+    "user": "resir014"
   },
   {
-    "id": "uNjxe8ShM-8",
-    "date": 1492414194,
-    "title": "On The Turing Completeness of PowerPoint (SIGBOVIK)",
+    "contentWarnings": [],
     "description": "A parody talk researching the turing-completeness of PowerPoint.",
-    "user": "resir014",
+    "title": "On The Turing Completeness of PowerPoint (SIGBOVIK)",
+    "addedtime": 14924141943,
     "tags": [],
-    "contentWarnings": []
-  },
-  {
-    "id": "p-R1O7FN3yI",
-    "date": 1492416194,
-    "title": "",
-    "description": "How the aeroplanes do the barrel rolls in real life",
-    "user": "karlen",
-    "tags": [],
-    "contentWarnings": []
-  },
-  {
-    "id": "thnXzUFJnfQ",
-    "date": 1492415194,
-    "title": "Amiga music: Captain - Space Debris",
-    "description": "",
-    "user": "resir014",
-    "tags": ["music"],
-    "contentWarnings": []
-  },
-  {
-    "id": "abQCqIbBBeM",
-    "date": 1492417194,
-    "title": "Internet Voting? Really? | Andrew Appel | TEDxPrincetonU",
-    "description": "",
-    "user": "resir014",
-    "tags": ["computers", "technology", "politics"],
-    "contentWarnings": []
-  },
-  {
-    "id": "wYj5o4kQsXs",
-    "date": 1492703036,
-    "title": "Um Bongo Original Advert",
-    "description": "",
-    "user": "karlen",
-    "tags": [],
-    "contentWarnings": []
+    "youtubelink": "https://www.youtube.com/watch?v=uNjxe8ShM-8",
+    "id": {
+      "v": [
+        "uNjxe8ShM-8"
+      ]
+    },
+    "user": "resir014"
   }
 ]
