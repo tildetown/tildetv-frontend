@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import VuePaginate from 'vue-paginate'
-import FetchData from 'vue-fetch-data'
 import Hello from '@/components/Hello'
 import Howto from '@/components/Howto'
 import Videos from '@/components/Videos'
@@ -9,7 +8,6 @@ import PageNotFound from '@/components/errors/404'
 
 Vue.use(Router)
 Vue.use(VuePaginate)
-Vue.use(FetchData)
 
 export default new Router({
   routes: [

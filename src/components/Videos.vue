@@ -1,8 +1,8 @@
 <template>
   <div id="videos">
-    <p v-if="videos.pending">fetching videos...</p>
-    <div v-if="videos.fulfilled">
-      <paginate class="video-list" name="videos" :list="videos.value" :per="1">
+    <p v-if="!fetched">fetching videos...</p>
+    <div v-if="videos && videos.length">
+      <paginate class="video-list" name="videos" :list="videos" :per="1">
         <li v-for="video in paginated('videos')">
           <app-video
             v-bind:id="video.id"
@@ -18,25 +18,37 @@
       <paginate-links for="videos"
         :simple="{ prev: '« previous', next: 'next »' }"></paginate-links>
     </div>
-    <p v-if="videos.rejected">{{ videos.reason.message }}</p>
+    <div v-if="errors && errors.length">
+      <p v-for="error of errors">{{error.message}}</p>
+    </div>
   </div>
 </template>
 
 <script>
 import Video from './video.vue'
+import axios from 'axios'
 
 export default {
   name: 'videos',
   data: () => ({
-    videos: {},
+    fetched: false,
+    videos: [],
+    errors: [],
     paginate: ['videos']
   }),
-  fetch: {
-    videos () {
-      return process.env.NODE_ENV === 'development'
-        ? 'static/sample-api/videos.json'
-        : 'https://tilde.town/~karlen/tv/videos.json'
-    }
+  created () {
+    const api = process.env.NODE_ENV === 'development'
+      ? 'static/sample-api/videos.json'
+      : 'https://tilde.town/~karlen/tv/videos.json'
+
+    axios.get(api).then(response => {
+      console.log(response.data)
+      this.fetched = true
+      this.videos = response.data
+    }).catch(e => {
+      this.fetched = true
+      this.errors.push(e)
+    })
   },
   components: {
     'app-video': Video
