@@ -18,8 +18,12 @@
       <paginate-links for="videos"
         :simple="{ prev: '« previous', next: 'next »' }"></paginate-links>
     </div>
-    <div v-if="errors && errors.length">
+    <div v-else-if="errors && errors.length">
       <p v-for="error of errors">{{error.message}}</p>
+    </div>
+    <div v-else-if="fetched">
+      <p>No videos posted in the past week.</p>
+      <p><router-link to="/howto" exact>Add some videos!</router-link></p>
     </div>
   </div>
 </template>
