@@ -42,7 +42,6 @@ export default {
       : 'https://tilde.town/~karlen/tv/videos.json'
 
     axios.get(api).then(response => {
-      console.log(response.data)
       this.fetched = true
       this.videos = response.data
     }).catch(e => {
