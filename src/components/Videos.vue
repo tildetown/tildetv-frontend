@@ -43,7 +43,7 @@ export default {
   created () {
     const api = process.env.NODE_ENV === 'development'
       ? 'static/sample-api/videos.json'
-      : 'https://tilde.town/~karlen/tv/videos.json'
+      : '/~karlen/tv/videos.json'
 
     axios.get(api).then(response => {
       this.fetched = true
