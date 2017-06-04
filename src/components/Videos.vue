@@ -41,11 +41,20 @@ export default {
     paginate: ['videos']
   }),
   created () {
-    const api = process.env.NODE_ENV === 'development'
-      ? 'static/sample-api/videos.json'
-      : '/~karlen/tv/videos.json'
+    const baseUrl = process.env.NODE_ENV === 'development'
+      ? 'static/sample-api'
+      : '/~karlen/tv'
 
-    axios.get(api).then(response => {
+    const api = axios.create({
+      baseURL: baseUrl,
+      timeout: 10000,
+      headers: {
+        'Accept': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
+    })
+
+    api.get('/videos.json').then(response => {
       this.fetched = true
       this.videos = response.data
     }).catch(e => {
