@@ -3,7 +3,7 @@
     <p v-if="!fetched">fetching videos...</p>
     <div v-if="videos && videos.length">
       <paginate class="video-list" name="videos" :list="videos" :per="1">
-        <li v-for="video in paginated('videos')">
+        <li v-for="video in paginated('videos')" v-bind:key="video.id">
           <app-video
             v-bind:id="video.id"
             v-bind:youtubelink="video.youtubelink"
@@ -19,7 +19,7 @@
         :simple="{ prev: '« previous', next: 'next »' }"></paginate-links>
     </div>
     <div v-else-if="errors && errors.length">
-      <p v-for="error of errors">{{error.message}}</p>
+      <p v-for="error of errors" v-bind:key="error.message">{{error.message}}</p>
     </div>
     <div v-else-if="fetched">
       <p>No videos posted in the past week.</p>

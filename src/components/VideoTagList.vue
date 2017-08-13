@@ -1,6 +1,6 @@
 <template>
   <div id="video-tag-list">
-    <span class="tag" v-for="tag in tags"><router-link :to="{ name: 'Videos By Tag', params: { tag }}">{{ tag }}</router-link></span>
+    <span class="tag" v-for="tag in tags" v-bind:key="tag"><router-link :to="{ name: 'Videos By Tag', params: { tag }}">{{ tag }}</router-link></span>
   </div>
 </template>
 
