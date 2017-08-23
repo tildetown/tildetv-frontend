@@ -6,7 +6,7 @@
     <ul>
       <li>simple, intuitive <router-link to="/videos">web viewer</router-link> (with tags &amp; content warnings)</li>
       <li><router-link to="/howto">add videos to the playlist</router-link> using a simple command line</li>
-      <li><a href="https://tilde.town/~karlen/tv/videos.json" target="_blank">JSON datadump</a>, for ~town members who want to develop their own, in-console viewer</li>
+      <li><a href="https://tilde.town/~karlen/tv/videos.json" target="_blank">JSON datadump</a>, for ~town members who want to develop their own, in-console client</li>
       <li>videos are reset every week, so you're bound to see something fresh!</li>
     </ul>
   </div>
