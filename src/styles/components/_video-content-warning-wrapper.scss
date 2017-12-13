@@ -18,7 +18,7 @@
     color: $content-warning-label-color;
     background-color: $content-warning-label-background;
 
-    &:last-child {
+    &:last-of-type {
       margin-right: 0;
     }
 
@@ -28,7 +28,7 @@
   }
 
   .content-warning-button {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     font-size: 85%;
 
     a {
