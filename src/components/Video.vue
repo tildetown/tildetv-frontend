@@ -6,24 +6,21 @@
     <div class="metadata">
       <h4 v-if="title">
         {{ title }}
-        <a title="Click to show content warnings" class="cw-notifier"
-          v-if="contentWarnings.length > 0"
-          v-on:click="cwToggle = !cwToggle">CW</a>
       </h4>
-      <video-content-warning-list v-if="cwToggle"
-        v-bind:contentWarnings="contentWarnings"></video-content-warning-list>
 
       <p v-if="description">{{ description }}</p>
       <p v-if="user"><small>added by <a :href="user | userLink">~{{ user }}</a> on {{ addedtime | generateTime }}</small></p>
 
       <video-tag-list v-if="tags.length > 0" v-bind:tags="tags"></video-tag-list>
     </div>
+    <video-content-warning-wrapper v-if="contentWarnings.length > 0"
+        v-bind:contentWarnings="contentWarnings"></video-content-warning-wrapper>
   </div>
 </template>
 
 <script>
 import VideoTagList from './VideoTagList.vue'
-import VideoContentWarningList from './VideoContentWarningList.vue'
+import VideoContentWarningWrapper from './VideoContentWarningWrapper.vue'
 
 export default {
   name: 'video',
@@ -35,7 +32,7 @@ export default {
   },
   components: {
     'video-tag-list': VideoTagList,
-    'video-content-warning-list': VideoContentWarningList
+    'video-content-warning-wrapper': VideoContentWarningWrapper
   },
   filters: {
     embedLink: function (value) {

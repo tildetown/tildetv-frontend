@@ -1,7 +1,15 @@
 @import "../utils/variables";
 
 #video-content-warning-list {
-  margin-bottom: 1rem;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $label-color;
 
   .content-warning {
     margin-right: .5rem;
@@ -16,6 +24,15 @@
 
     a {
       text-decoration: none;
+    }
+  }
+
+  .content-warning-button {
+    margin-top: 1.5rem;
+    font-size: 85%;
+
+    a {
+      cursor: pointer;
     }
   }
 }

@@ -1,23 +1,21 @@
 <template>
   <div id="videos">
     <p v-if="!fetched">fetching videos...</p>
-    <div v-if="videos && videos.length">
-      <paginate class="video-list" name="videos" :list="videos" :per="1">
-        <li v-for="video in paginated('videos')" v-bind:key="video.id">
-          <app-video
-            v-bind:id="video.id"
-            v-bind:youtubelink="video.youtubelink"
-            v-bind:title="video.title"
-            v-bind:addedtime="video.addedtime"
-            v-bind:description="video.description"
-            v-bind:user="video.user"
-            v-bind:tags="video.tags"
-            v-bind:contentWarnings="video.contentWarnings"></app-video>
-        </li>
-      </paginate>
-      <paginate-links for="videos"
-        :simple="{ prev: '« previous', next: 'next »' }"></paginate-links>
-    </div>
+    <paginate v-if="videos && videos.length" class="video-list" name="videos" :list="videos" :per="1">
+      <li v-for="video in paginated('videos')" v-bind:key="video.id">
+        <app-video
+          v-bind:id="video.id"
+          v-bind:youtubelink="video.youtubelink"
+          v-bind:title="video.title"
+          v-bind:addedtime="video.addedtime"
+          v-bind:description="video.description"
+          v-bind:user="video.user"
+          v-bind:tags="video.tags"
+          v-bind:contentWarnings="video.contentWarnings"></app-video>
+      </li>
+    </paginate>
+    <paginate-links for="videos" v-if="videos && videos.length"
+      :simple="{ prev: '« previous', next: 'next »' }"></paginate-links>
     <div v-else-if="errors && errors.length">
       <p v-for="error of errors" v-bind:key="error.message">{{error.message}}</p>
     </div>
