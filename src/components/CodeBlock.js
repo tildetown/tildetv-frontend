@@ -11,7 +11,7 @@ const Wrapper = styled.section`
   border-radius: .25rem;
 
   pre {
-    margin-bottom: 0;
+    margin: 0;
     overflow-x: auto;
   }
 `;

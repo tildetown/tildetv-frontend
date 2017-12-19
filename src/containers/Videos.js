@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as axios from 'axios';
-// import styled from 'styled-components';
 
+import Container from '../components/Container';
 import Video from '../components/Video';
 
 class VideosContainer extends React.Component {
@@ -51,10 +51,9 @@ class VideosContainer extends React.Component {
   );
 
   renderVideos = videos => (
-    <div>
-      <h2>we have {videos.length} video(s) for you this week</h2>
+    <Container>
       {videos.map(video => <Video key={video.id.v[0]} video={video} />)}
-    </div>
+    </Container>
   );
 
   render() {

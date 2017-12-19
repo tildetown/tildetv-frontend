@@ -23,7 +23,7 @@ Container.defaultProps = {
 };
 
 export default styled(Container)`
-  max-width: ${props => (props.fluid ? '100%' : '48em')};
+  max-width: ${props => (props.fluid ? '100%' : 'var(--container-width-lg)')};
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;

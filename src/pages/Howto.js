@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import Container from '../components/Container';
 import CodeBlock from '../components/CodeBlock';
+import PageHeader from '../components/PageHeader';
+import Page from '../containers/Page';
 
 const cli = `$ ~karlen/tv/addtotv -h
 
@@ -20,15 +22,19 @@ Options:
                         Description of the video, quoted. e.g. "A real
                         angerery pupper writing about pubs"`;
 
-const Home = () => (
-  <Container>
-    <h1>adding stuff to tildetv</h1>
-    <p>
-      to add videos to tildetv you can use the command-line tool provided by{' '}
-      <a href="https://tilde.town/~karlen">~karlen</a>.
-    </p>
-    <CodeBlock code={cli} />
-  </Container>
+const Howto = () => (
+  <Page>
+    <Container fluid>
+      <PageHeader>adding stuff to tildetv</PageHeader>
+    </Container>
+    <Container>
+      <p>
+        to add videos to tildetv you can use the command-line tool provided by{' '}
+        <a href="https://tilde.town/~karlen">~karlen</a>.
+      </p>
+      <CodeBlock code={cli} />
+    </Container>
+  </Page>
 );
 
-export default Home;
+export default Howto;
