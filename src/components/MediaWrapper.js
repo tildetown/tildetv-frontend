@@ -28,7 +28,8 @@ export default styled(VideoWrapper)`
     content: "";
   }
 
-  iframe {
+  iframe,
+  .media-content {
     position: absolute;
     top: 0;
     bottom: 0;
