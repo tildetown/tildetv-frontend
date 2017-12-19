@@ -1,8 +1,14 @@
 import * as React from 'react';
 import * as axios from 'axios';
+import styled from 'styled-components';
 
 import Container from '../components/Container';
 import Video from '../components/Video';
+
+const LoadingText = styled.p`
+  margin: 2rem 0;
+  text-align: center;
+`;
 
 class VideosContainer extends React.Component {
   constructor(props) {
@@ -47,7 +53,9 @@ class VideosContainer extends React.Component {
   }
 
   renderLoading = () => (
-    <div>Loading...</div>
+    <Container>
+      <LoadingText>Loading...</LoadingText>
+    </Container>
   );
 
   renderVideos = videos => (
