@@ -5,7 +5,6 @@ import styled, { css } from 'styled-components';
 const Button = ({
   id,
   className,
-  kind,
   onClick,
   type,
   children,
@@ -23,15 +22,6 @@ const Button = ({
 Button.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
-  kind: PropTypes.oneOf([
-    'default',
-    'primary',
-    'success',
-    'warning',
-    'danger',
-    'help',
-    'link',
-  ]),
   onClick: PropTypes.func,
   type: PropTypes.oneOf([
     'button',
@@ -44,7 +34,6 @@ Button.propTypes = {
 Button.defaultProps = {
   id: null,
   className: null,
-  kind: 'default',
   onClick: null,
   type: 'button',
 };
