@@ -7,8 +7,16 @@ import MediaWrapper from './MediaWrapper';
 import ContentWarningBlock from './ContentWarningBlock';
 
 const VideoItem = styled.article`
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin: 2rem 0;
+`;
+
+const VideoMetadata = styled.section``;
+
+const VideoTitle = styled.h4`
+  font-weight: 600;
 `;
 
 const Video = ({ video }) => (
@@ -19,7 +27,11 @@ const Video = ({ video }) => (
         onReady={e => e.target.pauseVideo()}
       />
     </MediaWrapper>
-    {video.contentWarnings.length !== 0 && <ContentWarningBlock warnings={video.contentWarnings} />}
+    <VideoMetadata>
+      {video.title ? <VideoTitle>{video.title}</VideoTitle> : null}
+      {video.description ? <p>{video.description}</p> : null}
+      {video.contentWarnings.length !== 0 ? <ContentWarningBlock warnings={video.contentWarnings} /> : null}
+    </VideoMetadata>
   </VideoItem>
 );
 

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Container from '../components/Container';
 import Video from '../components/Video';
+import Button from '../components/Button';
 
 const LoadingText = styled.p`
   margin: 2rem 0;
@@ -16,6 +17,7 @@ class VideosContainer extends React.Component {
 
     this.state = {
       fetched: false,
+      currentPage: 1,
       videos: [],
       errors: [],
     };
@@ -52,17 +54,46 @@ class VideosContainer extends React.Component {
     });
   }
 
+  prevPage() {
+    const { currentPage } = this.state;
+
+    if (currentPage > 1) {
+      this.setState({
+        currentPage: currentPage - 1,
+      });
+    }
+  }
+
+  nextPage() {
+    const { currentPage, videos } = this.state;
+
+    if (currentPage < videos.length) {
+      this.setState({
+        currentPage: currentPage + 1,
+      });
+    }
+  }
+
   renderLoading = () => (
     <Container>
       <LoadingText>Loading...</LoadingText>
     </Container>
   );
 
-  renderVideos = videos => (
-    <Container>
-      {videos.map(video => <Video key={video.id.v[0]} video={video} />)}
-    </Container>
-  );
+  renderVideos(videos) {
+    const { currentPage } = this.state;
+    const lastIndex = currentPage * 1;
+    const firstIndex = lastIndex - 1;
+    const currentIndexes = videos.slice(firstIndex, lastIndex);
+
+    return (
+      <Container fluid>
+        {currentIndexes.map(video => <Video key={video.id.v[0]} video={video} />)}
+        {currentPage > 1 ? <Button onClick={() => this.prevPage()}>&laquo;</Button> : null}{' '}
+        {currentPage < videos.length ? <Button onClick={() => this.nextPage()}>&raquo;</Button> : null}
+      </Container>
+    );
+  }
 
   render() {
     if (this.state.fetched) {
