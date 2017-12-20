@@ -23,20 +23,21 @@
   "dependencies": {
     "axios": "^0.17.1",
     "color": "^2.0.1",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-media": "^1.6.1",
     "react-router-dom": "^4.2.2",
+    "react-test-renderer": "^16.2.0",
     "react-youtube": "^7.5.0",
     "styled-components": "^2.3.0"
   },
   "devDependencies": {
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.13.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-compat": "^2.1.0",
@@ -44,7 +45,6 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prefer-object-spread": "^1.2.1",
     "eslint-plugin-react": "^7.5.1",
-    "react-scripts": "1.0.17",
-    "react-test-renderer": "^16.2.0"
+    "react-scripts": "1.0.17"
   }
 }
