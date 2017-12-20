@@ -7,9 +7,7 @@ import Container from '../components/Container';
 
 const Home = () => (
   <Page>
-    <Container fluid>
-      <PageHeader>welcome to tildetv</PageHeader>
-    </Container>
+    <PageHeader title="welcome to tildetv" subtitle="sit back and relax" />
     <Container>
       <p>
         tildetv is an alternative way to enjoy visual media on the internet. it&apos;s a playlist of YouTube videos{' '}

@@ -24,9 +24,7 @@ Options:
 
 const Howto = () => (
   <Page>
-    <Container fluid>
-      <PageHeader>adding stuff to tildetv</PageHeader>
-    </Container>
+    <PageHeader title="adding stuff to tildetv" />
     <Container>
       <p>
         to add videos to tildetv you can use the command-line tool provided by{' '}

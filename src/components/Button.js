@@ -58,13 +58,13 @@ export default styled(Button)`
   border: 2px solid white;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, .25)
+  }
+
   ${props => props.kind === 'primary' && css`
     color: var(--link-color);
     border-color: var(--link-color);
-
-    &:hover,
-    &:focus {
-      background-color: rgba(0, 0, 0, .2)
-    }
   `}
 `;

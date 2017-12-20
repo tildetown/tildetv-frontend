@@ -1,9 +1,14 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Container from './Container';
 
-const StyledH1 = styled.h1`
+const Wrapper = styled(Container)`
   margin: 2rem 0;
+`;
+
+const PageTitle = styled.h1`
+  margin: 0;
   position: relative;
   text-align: center;
 
@@ -37,12 +42,29 @@ const StyledH1 = styled.h1`
   }
 `;
 
-const PageHeader = ({ children }) => (
-  <StyledH1><span>{children}</span></StyledH1>
+const PageSubtitle = styled.p`
+  margin-top: 1rem;
+  margin-bottom: 0;
+  position: relative;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+`;
+
+const PageHeader = ({ title, subtitle }) => (
+  <Wrapper fluid>
+    <PageTitle><span>{title}</span></PageTitle>
+    {subtitle && <PageSubtitle>{subtitle}</PageSubtitle>}
+  </Wrapper>
 );
 
 PageHeader.propTypes = {
-  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.node,
+};
+
+PageHeader.defaultProps = {
+  subtitle: null,
 };
 
 export default PageHeader;
