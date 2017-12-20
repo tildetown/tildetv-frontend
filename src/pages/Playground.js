@@ -22,17 +22,18 @@ const Playground = () => (
   <Page>
     <Container fluid>
       <h2>Button</h2>
+      <h3>Default size</h3>
       <PreviewBox>
-        <Button>Click here</Button>{' '}
-        <Button kind="primary">Click here</Button>
+        <Button>Default button</Button>{' '}
+        <Button kind="primary">Primary button</Button>
       </PreviewBox>
       <Divider />
       <h2>PageHeader</h2>
-      <p>With subtitle:</p>
+      <h3>With subtitle</h3>
       <PreviewBox>
         <PageHeader title="welcome to tildetv" subtitle="sit back and relax" />
       </PreviewBox>
-      <p>Without subtitle:</p>
+      <h3>Without subtitle</h3>
       <PreviewBox>
         <PageHeader title="this week&apos;s playlist" />
       </PreviewBox>
