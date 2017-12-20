@@ -52,7 +52,7 @@ Button.defaultProps = {
 export default styled(Button)`
   display: inline-block;
   border-radius: 3px;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
   background: transparent;
   color: var(--base07);
   border: 2px solid white;
@@ -62,6 +62,11 @@ export default styled(Button)`
   &:focus {
     background-color: rgba(0, 0, 0, .25)
   }
+
+  ${props => props.size === 'small' && css`
+    padding: .25rem .5rem;
+    font-size: 90%;
+  `}
 
   ${props => props.kind === 'primary' && css`
     color: var(--link-color);

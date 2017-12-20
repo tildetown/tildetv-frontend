@@ -11,6 +11,11 @@ const LoadingText = styled.p`
   text-align: center;
 `;
 
+const PaginationWrapper = styled.div`
+  margin: 1rem 0;
+  text-align: center;
+`;
+
 class VideosContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -89,8 +94,10 @@ class VideosContainer extends React.Component {
     return (
       <Container fluid>
         {currentIndexes.map(video => <Video key={video.id.v[0]} video={video} />)}
-        {currentPage > 1 ? <Button onClick={() => this.prevPage()}>&laquo;</Button> : null}{' '}
-        {currentPage < videos.length ? <Button onClick={() => this.nextPage()}>&raquo;</Button> : null}
+        <PaginationWrapper>
+          {currentPage > 1 ? <Button onClick={() => this.prevPage()}>&lt;&lt;</Button> : null}{' '}
+          {currentPage < videos.length ? <Button onClick={() => this.nextPage()}>&gt;&gt;</Button> : null}
+        </PaginationWrapper>
       </Container>
     );
   }

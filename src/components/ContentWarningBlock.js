@@ -78,7 +78,9 @@ class ContentWarningBlock extends React.Component {
               <CWLabelWrapper>
                 {warnings.map(w => <CWLabel key={w}>{w}</CWLabel>)}
               </CWLabelWrapper>
-              <Button kind="primary" onClick={() => this.setState({ visible: false })}>click to continue</Button>
+              <Button size="small" kind="primary" onClick={() => this.setState({ visible: false })}>
+                click to continue
+              </Button>
             </OverlayInner>
           </Overlay>}
       </React.Fragment>
