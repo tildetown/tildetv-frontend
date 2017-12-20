@@ -5,10 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 import 'normalize.css';
 import './styles/index.css';
 import Root from './Root';
-import getBaseUrl from './utils/getBaseUrl';
 
 const wrapped = (
-  <BrowserRouter basename={getBaseUrl()}>
+  <BrowserRouter basename={process.env.PUBLIC_URL || null}>
     <Root />
   </BrowserRouter>
 );
