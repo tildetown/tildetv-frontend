@@ -81,13 +81,15 @@ const Video = ({ video }) => (
       </VideoTagWrapper>
       <VideoTagFooter>
         <p>
-          Posted by{' '}
-          <a href={`https://tilde.town/~${video.user}`} target="_blank" rel="noopener noreferrer">
-            ~{video.user}
-          </a>{' '}
-          at{' '}
-          {new Date(video.addedtime * 1000).toLocaleDateString()}{' '}
-          {new Date(video.addedtime * 1000).toLocaleTimeString()}
+          <small>
+            Posted by{' '}
+            <a href={`https://tilde.town/~${video.user}`} target="_blank" rel="noopener noreferrer">
+              ~{video.user}
+            </a>{' '}
+            at{' '}
+            {new Date(video.addedtime * 1000).toLocaleDateString()}{' '}
+            {new Date(video.addedtime * 1000).toLocaleTimeString()}
+          </small>
         </p>
       </VideoTagFooter>
     </VideoMetadata>
