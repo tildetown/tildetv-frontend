@@ -43,7 +43,7 @@ const PageTitle = styled.h1`
 `;
 
 const PageSubtitle = styled.p`
-  margin-top: 1rem;
+  margin-top: .5rem;
   margin-bottom: 0;
   position: relative;
   text-align: center;
