@@ -71,11 +71,11 @@ const Video = ({ video }) => (
         videoId={video.id.v[0]}
         onReady={e => e.target.pauseVideo()}
       />
+      {video.contentWarnings.length !== 0 ? <ContentWarningBlock warnings={video.contentWarnings} /> : null}
     </VideoWrapper>
     <VideoMetadata>
       {video.title ? <VideoTitle>{video.title}</VideoTitle> : null}
       {video.description ? <p>{video.description}</p> : null}
-      {video.contentWarnings.length !== 0 ? <ContentWarningBlock warnings={video.contentWarnings} /> : null}
       <VideoTagWrapper>
         {video.tags.map(w => <VideoTagLabel key={w}>{w}</VideoTagLabel>)}
       </VideoTagWrapper>
