@@ -3,6 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://tilde.town/~resir014/tildetv",
+  "author": {
+    "name": "Resi Respati",
+    "email": "resir014@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "react-scripts build",
+    "commit": "git-cz",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "axios": "^0.17.1",
     "color": "^2.0.1",
@@ -16,18 +33,6 @@
     "react-scripts": "1.0.17",
     "react-youtube": "^7.5.0",
     "styled-components": "^2.3.0"
-  },
-  "scripts": {
-    "build": "react-scripts build",
-    "commit": "git-cz",
-    "eject": "react-scripts eject",
-    "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
   },
   "devDependencies": {
     "commitizen": "^2.9.6",
