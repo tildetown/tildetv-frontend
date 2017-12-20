@@ -35,8 +35,9 @@ const PageTitle = styled.h1`
   }
 
   > span {
-    padding: .25rem 1rem;
+    display: inline-block;
     position: relative;
+    padding: .25rem 1rem;
     background-color: var(--body-bg);
     z-index: 2;
   }
