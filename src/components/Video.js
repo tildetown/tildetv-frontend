@@ -56,7 +56,7 @@ const VideoTagLabel = styled.span`
   }
 `;
 
-const VideoTagFooter = styled.footer`
+const VideoTimestamp = styled.footer`
   margin: 1rem 0;
 
   p {
@@ -79,7 +79,7 @@ const Video = ({ video }) => (
       <VideoTagWrapper>
         {video.tags.map(w => <VideoTagLabel key={w}>{w}</VideoTagLabel>)}
       </VideoTagWrapper>
-      <VideoTagFooter>
+      <VideoTimestamp>
         <p>
           <small>
             Posted by{' '}
@@ -91,7 +91,7 @@ const Video = ({ video }) => (
             {new Date(video.addedtime * 1000).toLocaleTimeString()}
           </small>
         </p>
-      </VideoTagFooter>
+      </VideoTimestamp>
     </VideoMetadata>
   </VideoItem>
 );
