@@ -5,12 +5,11 @@
   "files.encoding": "utf8",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
   "search.exclude": {
-    "dist/**": true,
-    "static/**": true,
-    "_posts/**": true,
-    "_projects/**": true,
-    "_site/**": true,
-    ".sass-cache/**": true
+    "build/**": true,
   }
 }
