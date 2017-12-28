@@ -105,7 +105,7 @@ class VideosContainer extends React.Component {
   render() {
     if (this.state.fetched) {
       return this.state.errors.length === 0
-        ? this.renderVideos(this.state.videos)
+        ? this.renderVideos(this.state.videos.reverse())
         : null;
     }
     return this.renderLoading();
