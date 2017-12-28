@@ -76,9 +76,11 @@ const Video = ({ video }) => (
     <VideoMetadata>
       {video.title ? <VideoTitle>{video.title}</VideoTitle> : null}
       {video.description ? <p>{video.description}</p> : null}
-      <VideoTagWrapper>
-        {video.tags.map(w => <VideoTagLabel key={w}>{w}</VideoTagLabel>)}
-      </VideoTagWrapper>
+      {video.tags ? (
+        <VideoTagWrapper>
+          {video.tags.map(w => <VideoTagLabel key={w}>{w}</VideoTagLabel>)}
+        </VideoTagWrapper>
+      ) : null}
       <VideoTimestamp>
         <p>
           <small>
