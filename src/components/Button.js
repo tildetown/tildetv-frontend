@@ -45,6 +45,7 @@ export default styled(Button)`
   background: transparent;
   color: var(--base07);
   border: 2px solid white;
+  font-family: var(--root-font-family);
   cursor: pointer;
 
   &:hover,
