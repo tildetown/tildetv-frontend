@@ -49,7 +49,7 @@ class VideosContainer extends React.Component {
     api.get('/videos.json').then((res) => {
       this.setState({
         fetched: true,
-        videos: res.data,
+        videos: res.data.reverse(), // show latest videos first
       });
     }).catch((e) => {
       this.setState({
@@ -105,7 +105,7 @@ class VideosContainer extends React.Component {
   render() {
     if (this.state.fetched) {
       return this.state.errors.length === 0
-        ? this.renderVideos(this.state.videos.reverse())
+        ? this.renderVideos(this.state.videos)
         : null;
     }
     return this.renderLoading();
