@@ -22,7 +22,10 @@ const Footer = () => (
           <a href="https://tilde.town/~resir014" target="_blank" rel="noopener noreferrer">
             ~resir014
           </a>.{' '}
-          backend work by ~karlen.
+          backend work by{' '}
+          <a href="https://tilde.town/~karlen" target="_blank" rel="noopener noreferrer">
+            ~karlen
+          </a>.
         </small>
       </p>
       <p>
